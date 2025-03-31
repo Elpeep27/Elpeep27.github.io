@@ -10,11 +10,11 @@ body {
 header.navbar {
     background-color: #333;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacio entre logo y navegación */
     align-items: center;
-    padding: 0.5rem 1rem; /* Padding superior e inferior reducido, padding lateral */
+    padding: 0.5rem 1rem;
     color: white;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -24,15 +24,16 @@ header.navbar .navbar-logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-right: auto; /* Empuja el logo a la izquierda en pantallas grandes */
 }
 
 header.navbar .navbar-logo img {
-    width: 40px; /* Logo más pequeño */
+    width: 40px;
     height: auto;
 }
 
 header.navbar .navbar-logo span {
-    font-size: 1rem; /* Texto del logo más pequeño */
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -41,20 +42,23 @@ nav ul.navbar-links {
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que los links se envuelvan */
+    justify-content: center; /* Centra los links en pantallas pequeñas */
+    align-items: center; /* Alinea verticalmente los links */
 }
 
 nav ul.navbar-links li {
-    margin: 0 0.5rem; /* Margen horizontal reducido */
+    margin: 0 0.5rem;
 }
 
 nav ul.navbar-links li a {
     color: white;
     text-decoration: none;
     font-weight: 400;
-    font-size: 0.9rem; /* Texto del link más pequeño */
+    font-size: 0.9rem;
     transition: color 0.3s ease;
+    display: block; /* Asegura que el enlace ocupe todo el espacio de su li */
+    padding: 0.25rem 0.5rem; /* Añade padding al enlace para que sea más fácil de tocar */
 }
 
 nav ul.navbar-links li a:hover {
@@ -69,7 +73,7 @@ main {
 
 /* Ajuste importante: padding-top para el contenido principal */
 main {
-    padding-top: 3rem; /* Ajustado para la nueva altura del menú */
+    padding-top: 3rem;
     padding-bottom: 1rem;
     margin: auto;
     max-width: 1200px;
@@ -299,17 +303,18 @@ footer {
 /* Para pantallas de celular (menos de 768px) */
 @media (max-width: 768px) {
     header.navbar {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección a columna */
         text-align: center;
     }
 
     header.navbar .navbar-logo {
         margin-bottom: 1rem;
-        justify-content: center;
+        justify-content: center; /* Centra el logo */
+        margin-right: 0; /* Elimina el margen derecho en móviles */
     }
 
     nav ul.navbar-links {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección a columna */
     }
 
     nav ul.navbar-links li {
@@ -343,7 +348,8 @@ footer {
     .aliados-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-      header.navbar .navbar-logo span,
+
+    header.navbar .navbar-logo span,
     nav ul.navbar-links li a {
         color: white;
     }
