@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem; /* Más pequeño en móvil */
     box-sizing: border-box;
   }
 
@@ -40,18 +40,18 @@
   .navbar-logo {
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+    margin-left: 0.5rem; /* Más pequeño en móvil */
   }
 
   .navbar-logo img {
-    height: 3rem;
+    height: 2.5rem; /* Más pequeño en móvil */
   }
 
   .navbar-logo span {
     color: var(--color-texto-claro);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Más pequeño en móvil */
     font-weight: 700;
-    margin-left: 0.75rem;
+    margin-left: 0.5rem; /* Más pequeño en móvil */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 
@@ -63,15 +63,15 @@
   }
 
   nav ul li {
-    margin-left: 1rem;
+    margin-left: 0.5rem; /* Más pequeño en móvil */
   }
 
   nav ul li a {
     color: var(--color-texto-claro);
     font-weight: 600;
     transition: color 0.3s ease, text-shadow 0.3s ease;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+    font-size: 1rem; /* Más pequeño en móvil */
+    padding: 0.25rem 0.5rem; /* Más pequeño en móvil */
     border-radius: 0.5rem;
     display: block;
     position: relative;
@@ -100,13 +100,13 @@
   }
 
   main {
-    margin-top: 4rem;
-    padding: 2rem;
+    margin-top: 6rem; /* Ajustado para el nuevo header */
+    padding: 1rem;
     border-radius: 1rem;
     background-color: rgba(4, 36, 37, 0.7);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 90%;
+    max-width: 95%; /* Más ancho en móvil */
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -118,17 +118,17 @@
 
   main section.bloquePrincipal h2.titulo-principal {
     color: var(--color-primario);
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   main section.bloquePrincipal p {
     color: var(--color-texto-claro);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Más pequeño en móvil */
+    line-height: 1.5; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
   }
 
   main section.bloquePrincipal p strong {
@@ -137,7 +137,7 @@
 
   .carousel-container {
     position: relative;
-    width: 90%;
+    width: 95%; /* Más ancho en móvil */
     max-width: 800px;
     margin: 2rem auto;
     overflow: hidden;
@@ -169,8 +169,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem; /* Más pequeño en móvil */
+    font-size: 1.2rem; /* Más pequeño en móvil */
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 0.5rem;
@@ -182,11 +182,11 @@
   }
 
   .carousel-button.prev {
-    left: 1rem;
+    left: 0.5rem; /* Más pequeño en móvil */
   }
 
   .carousel-button.next {
-    right: 1rem;
+    right: 0.5rem; /* Más pequeño en móvil */
   }
 
   .carousel-nav {
@@ -196,11 +196,11 @@
   }
 
   .carousel-nav .carousel-indicator {
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem; /* Más pequeño en móvil */
+    height: 0.75rem; /* Más pequeño en móvil */
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 0.5rem;
+    margin: 0 0.25rem; /* Más pequeño en móvil */
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -211,11 +211,11 @@
 
   main section.bloquePrincipal p#mision {
     color: var(--color-primario);
-    font-size: 1.2rem;
+    font-size: 1rem; /* Más pequeño en móvil */
     font-style: italic;
     text-align: center;
-    margin-top: 2rem;
-    padding: 0.75rem 1rem;
+    margin-top: 1.5rem; /* Más pequeño en móvil */
+    padding: 0.5rem; /* Más pequeño en móvil */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -223,8 +223,8 @@
 
   .section-title {
     color: var(--color-primario);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
@@ -232,8 +232,8 @@
   .testimonial-card {
     background-color: rgba(255, 255, 255, 0.06);
     border-radius: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -246,62 +246,62 @@
 
   .testimonial-card p {
     color: var(--color-texto-claro);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Más pequeño en móvil */
+    line-height: 1.5; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
     font-style: italic;
   }
 
   .testimonial-card h4 {
     color: var(--color-primario);
-    font-size: 1.2rem;
+    font-size: 1rem; /* Más pequeño en móvil */
     font-weight: 600;
     text-align: right;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* Más pequeño en móvil */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .approach-section {
     background-color: rgba(255, 255, 255, 0.06);
     border-radius: 1rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .approach-section h2 {
     color: var(--color-primario);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .approach-section p {
     color: var(--color-texto-claro);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Más pequeño en móvil */
+    line-height: 1.5; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
   }
 
   .approach-section ul {
     list-style: disc;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
+    padding-left: 1.5rem; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
   }
 
   .approach-section ul li {
     color: var(--color-texto-claro);
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 0.9rem; /* Más pequeño en móvil */
+    line-height: 1.5; /* Más pequeño en móvil */
   }
 
   #mision-vision-enfoque {
     background-color: rgba(255, 255, 255, 0.06);
     border-radius: 1rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -311,20 +311,20 @@
 
   #mision-vision-enfoque h2 {
     color: var(--color-primario);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem; /* Más pequeño en móvil */
+    margin-bottom: 1rem; /* Más pequeño en móvil */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   #mision-vision-enfoque p {
     color: var(--color-texto-claro);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Más pequeño en móvil */
+    line-height: 1.5; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
     text-align: center;
     transition: background-image 0.5s ease, transform 0.3s ease;
-    padding: 1rem;
+    padding: 0.5rem; /* Más pequeño en móvil */
     border-radius: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -339,19 +339,19 @@
 
   #mision-vision-enfoque h3 {
     color: var(--color-primario);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Más pequeño en móvil */
+    margin-bottom: 0.75rem; /* Más pequeño en móvil */
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .lema-destacado {
     color: var(--color-primario);
-    font-size: 1.4rem;
+    font-size: 1rem; /* Más pequeño en móvil */
     font-style: italic;
     text-align: center;
-    margin-top: 2rem;
-    padding: 1rem;
+    margin-top: 1.5rem; /* Más pequeño en móvil */
+    padding: 0.5rem; /* Más pequeño en móvil */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -361,11 +361,11 @@
     header.navbar {
       flex-direction: column;
       text-align: center;
-      padding: 1rem;
+      padding: 0.5rem; /* Más pequeño en móvil */
     }
 
     .navbar-logo {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem; /* Más pequeño en móvil */
       margin-left: 0;
     }
 
@@ -376,44 +376,56 @@
 
     nav ul li {
       margin-left: 0;
-      margin-top: 1rem;
+      margin-top: 0.5rem; /* Más pequeño en móvil */
     }
 
     main {
-      margin-top: 8rem;
+      margin-top: 7rem; /* Ajustado para el nuevo header */
     }
   }
 
   @media (max-width: 480px) {
     header.navbar {
-      padding: 0.5rem;
+      padding: 0.25rem; /* Aún más pequeño en móvil */
+      flex-direction: column; /* Asegura la dirección de columna en pantallas muy pequeñas */
+    }
+
+    .navbar-logo {
+      margin-bottom: 0.25rem; /* Espacio reducido para el logo en móvil */
     }
 
     .navbar-logo img {
-      height: 2.5rem;
+      height: 2rem; /* Más pequeño en móvil */
     }
 
     .navbar-logo span {
-      font-size: 1.2rem;
+      font-size: 1rem; /* Aún más pequeño en móvil */
+    }
+
+    nav ul {
+      flex-direction: column; /* Asegura la dirección de columna en pantallas muy pequeñas */
+    }
+    nav ul li {
+      margin-top: 0.5rem; /* Reduce el margen entre elementos de navegación en móvil */
     }
 
     nav ul li a {
-      font-size: 1rem;
-      padding: 0.5rem;
+      font-size: 0.9rem; /* Aún más pequeño en móvil */
+      padding: 0.25rem 0.5rem; /* Aún más pequeño en móvil */
     }
 
     main {
-      margin-top: 7rem;
-      padding: 1rem;
+      margin-top: 6rem; /* Ajustado para el header */
+      padding: 0.75rem; /* Menos padding en móvil */
     }
 
     main section.bloquePrincipal h2.titulo-principal {
-      font-size: 1.8rem;
+      font-size: 1.4rem; /* Aún más pequeño en móvil */
     }
 
     main section.bloquePrincipal p {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 0.85rem; /* Aún más pequeño en móvil */
+      line-height: 1.4; /* Aún más pequeño en móvil */
     }
   }
 
