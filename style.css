@@ -193,6 +193,98 @@ main {
     color: #333;
 }
 
+/* Estilos para la sección de "Nuestro Trabajo" */
+#nuestro-trabajo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#nuestro-trabajo h2.section-title {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.trabajo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño de cuadrícula flexible */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.trabajo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trabajo-card:hover {
+    transform: translateY(-5px);
+}
+
+.trabajo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.trabajo-card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.trabajo-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para la sección de "Aliados" */
+#aliados {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#aliados h2.section-title {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.aliados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Rejilla flexible para los logos */
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-items: center; /* Centrar elementos en cada celda de la rejilla */
+}
+
+
+.aliados-grid img {
+    width: 100%; /* Hace que la imagen se ajuste al ancho de la celda */
+    max-height: 100px; /* Limita la altura máxima de los logos */
+    object-fit: contain;  /* Mantiene la proporción de la imagen y la ajusta al contenedor */
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.aliados-grid img:hover {
+    opacity: 1;
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
 /* Media Queries para Responsive Design */
 
 /* Para pantallas de celular (menos de 768px) */
@@ -226,6 +318,16 @@ main {
     .testimonial-card p{
         font-size: 0.9rem;
     }
+    .trabajo-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    .aliados-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+    }
+    header.navbar .navbar-logo span,
+    nav ul.navbar-links li a{
+        color: white;
+    }
 }
 
 /* Para pantallas de tablet (entre 769px y 1024px) */
@@ -244,6 +346,12 @@ main {
     }
     #mision-vision-enfoque p {
         font-size: 1.1rem;
+    }
+    .trabajo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+    .aliados-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en tabletas */
     }
 }
 
@@ -271,5 +379,11 @@ main {
     }
     #mision-vision-enfoque p {
         font-size: 1.1rem;
+    }
+    .trabajo-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorios */
+    }
+    .aliados-grid{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
