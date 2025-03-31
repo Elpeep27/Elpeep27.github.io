@@ -10,26 +10,29 @@ body {
 header.navbar {
     background-color: #333;
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y navegación */
-    align-items: center; /* Centrar verticalmente */
-    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Padding superior e inferior reducido, padding lateral */
     color: white;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header.navbar .navbar-logo {
     display: flex;
-    align-items: center; /* Centrar logo e imagen */
-    gap: 10px; /* Espacio entre logo e imagen */
+    align-items: center;
+    gap: 10px;
 }
 
 header.navbar .navbar-logo img {
-    width: 50px; /* Tamaño del logo */
+    width: 40px; /* Logo más pequeño */
     height: auto;
 }
 
 header.navbar .navbar-logo span {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Texto del logo más pequeño */
     font-weight: 600;
 }
 
@@ -38,30 +41,38 @@ nav ul.navbar-links {
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;  /*Permite que los links se envuelvan*/
-    justify-content: center; /*Centra los links en pantallas pequeñas*/
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul.navbar-links li {
-    margin: 0 1rem; /* Espacio entre links */
+    margin: 0 0.5rem; /* Margen horizontal reducido */
 }
 
 nav ul.navbar-links li a {
     color: white;
     text-decoration: none;
     font-weight: 400;
-    font-size: 1rem;
-    transition: color 0.3s ease; /* Transición suave para el color */
+    font-size: 0.9rem; /* Texto del link más pequeño */
+    transition: color 0.3s ease;
 }
 
 nav ul.navbar-links li a:hover {
-    color: #4CAF50; /* Color al pasar el mouse */
+    color: #4CAF50;
 }
 
 main {
     padding: 1rem;
     margin: auto;
-    max-width: 1200px; /* Máximo ancho del contenido principal */
+    max-width: 1200px;
+}
+
+/* Ajuste importante: padding-top para el contenido principal */
+main {
+    padding-top: 3rem; /* Ajustado para la nueva altura del menú */
+    padding-bottom: 1rem;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .bloquePrincipal {
@@ -81,7 +92,7 @@ main {
 }
 
 .bloquePrincipal strong.lema-destacado {
-    color: #007bff; /* Color del lema */
+    color: #007bff;
     font-weight: 600;
 }
 
@@ -99,7 +110,7 @@ main {
 
 .carousel-slide {
     flex: 0 0 100%;
-    min-width: 100%; /* Asegura que cada slide ocupe el 100% del ancho */
+    min-width: 100%;
 }
 
 .carousel-slide img {
@@ -207,7 +218,7 @@ main {
 
 .trabajo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño de cuadrícula flexible */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -256,17 +267,16 @@ main {
 
 .aliados-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Rejilla flexible para los logos */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     margin-top: 2rem;
-    justify-items: center; /* Centrar elementos en cada celda de la rejilla */
+    justify-items: center;
 }
 
-
 .aliados-grid img {
-    width: 100%; /* Hace que la imagen se ajuste al ancho de la celda */
-    max-height: 100px; /* Limita la altura máxima de los logos */
-    object-fit: contain;  /* Mantiene la proporción de la imagen y la ajusta al contenedor */
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
     opacity: 0.6;
     transition: opacity 0.3s ease;
 }
@@ -274,7 +284,6 @@ main {
 .aliados-grid img:hover {
     opacity: 1;
 }
-
 
 /* Estilos para el pie de página */
 footer {
@@ -290,42 +299,52 @@ footer {
 /* Para pantallas de celular (menos de 768px) */
 @media (max-width: 768px) {
     header.navbar {
-        flex-direction: column; /* Apila los elementos del header */
+        flex-direction: column;
         text-align: center;
     }
+
     header.navbar .navbar-logo {
         margin-bottom: 1rem;
-        justify-content: center; /* Centra el logo en pantallas pequeñas*/
+        justify-content: center;
     }
+
     nav ul.navbar-links {
-        flex-direction: column; /* Apila los links de navegación */
+        flex-direction: column;
     }
+
     nav ul.navbar-links li {
         margin: 0.5rem 0;
     }
+
     .bloquePrincipal h2.titulo-principal {
         font-size: 2rem;
     }
+
     .bloquePrincipal p {
         font-size: 1rem;
     }
+
     #mision-vision-enfoque h2.section-title {
         font-size: 1.6rem;
     }
+
     #mision-vision-enfoque p {
         font-size: 1rem;
     }
-    .testimonial-card p{
+
+    .testimonial-card p {
         font-size: 0.9rem;
     }
+
     .trabajo-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
     }
+
     .aliados-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+        grid-template-columns: repeat(2, 1fr);
     }
-    header.navbar .navbar-logo span,
-    nav ul.navbar-links li a{
+      header.navbar .navbar-logo span,
+    nav ul.navbar-links li a {
         color: white;
     }
 }
@@ -333,57 +352,71 @@ footer {
 /* Para pantallas de tablet (entre 769px y 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     nav ul.navbar-links {
-        justify-content: center; /* Centra los links en tabletas */
+        justify-content: center;
     }
+
     .bloquePrincipal h2.titulo-principal {
         font-size: 2.5rem;
     }
+
     .bloquePrincipal p {
         font-size: 1.1rem;
     }
+
     #mision-vision-enfoque h2.section-title {
         font-size: 1.8rem;
     }
+
     #mision-vision-enfoque p {
         font-size: 1.1rem;
     }
+
     .trabajo-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+        grid-template-columns: repeat(2, 1fr);
     }
+
     .aliados-grid {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas en tabletas */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Para escritorios (más de 1024px) */
 @media (min-width: 1025px) {
     header.navbar {
-        flex-direction: row; /* Vuelve al diseño horizontal en escritorios */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+
     nav ul.navbar-links {
-        flex-direction: row; /* Mantiene los links horizontales en escritorio */
+        flex-direction: row;
     }
+
     nav ul.navbar-links li {
         margin: 0 1rem;
     }
+
     .bloquePrincipal h2.titulo-principal {
         font-size: 3rem;
     }
+
     .bloquePrincipal p {
         font-size: 1.2rem;
     }
+
     #mision-vision-enfoque h2.section-title {
         font-size: 2rem;
     }
+
     #mision-vision-enfoque p {
         font-size: 1.1rem;
     }
+
     .trabajo-grid {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorios */
+        grid-template-columns: repeat(3, 1fr);
     }
-    .aliados-grid{
+
+    .aliados-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
