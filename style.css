@@ -1,187 +1,275 @@
-/* Estilos generales */
+/* Estilos CSS para hacerlo responsivo */
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
 }
 
-.caja {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 20px;
+header.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y navegación */
+    align-items: center; /* Centrar verticalmente */
+    padding: 1rem;
+    color: white;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
-header {
-    background: #042425;
-    padding: 20px 0;
+header.navbar .navbar-logo {
+    display: flex;
+    align-items: center; /* Centrar logo e imagen */
+    gap: 10px; /* Espacio entre logo e imagen */
 }
 
-header h1 {
-    display: inline-block;
+header.navbar .navbar-logo img {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
 }
 
-header nav {
-    display: inline-block;
-    float: right;
+header.navbar .navbar-logo span {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-header nav ul {
+nav ul.navbar-links {
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;  /*Permite que los links se envuelvan*/
+    justify-content: center; /*Centra los links en pantallas pequeñas*/
 }
 
-header nav li {
-    display: inline;
-    margin-left: 20px;
+nav ul.navbar-links li {
+    margin: 0 1rem; /* Espacio entre links */
 }
 
-header nav a {
+nav ul.navbar-links li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2em;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Transición suave para el color */
 }
 
-header nav a:hover {
-    color: #b2f5ea;
-}
-
-.banner {
-    width: 100%;
-    display: block;
+nav ul.navbar-links li a:hover {
+    color: #4CAF50; /* Color al pasar el mouse */
 }
 
 main {
-    padding: 20px 0;
-    text-align: center;
-}
-
-.titulo-principal {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #042425;
+    padding: 1rem;
+    margin: auto;
+    max-width: 1200px; /* Máximo ancho del contenido principal */
 }
 
 .bloquePrincipal {
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.bloquePrincipal h2.titulo-principal {
+    font-size: 2.2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
 }
 
 .bloquePrincipal p {
-    line-height: 1.6em;
-    margin-bottom: 1em;
-    text-align: justify;
-}
-
-.titulo-centralizado {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 20px 0;
-    color: #042425;
-}
-
-/* Nuevos estilos para la sección de inicio */
-.bloquePrincipal {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #c7e9e7;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.bloquePrincipal h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #042425;
-}
-
-.bloquePrincipal p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     line-height: 1.7;
-    margin-bottom: 20px;
-    text-align: justify;
-   
 }
 
-.bloquePrincipal .carousel-container {
-    margin-bottom: 20px;
-}
-
-.bloquePrincipal em {
-    font-style: italic;
-    color: #042425;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #042425;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.navbar.scrolled {
-    background-color: #042425E6;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-logo img {
-    height: 40px;
-    margin-right: 1rem;
-}
-
-.navbar-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links li {
-    margin-left: 1.5rem;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: #ffffff;
+.bloquePrincipal strong.lema-destacado {
+    color: #007bff; /* Color del lema */
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
-    color: #b2f5ea;
-}
-
-.navbar-links a {
+.carousel-container {
     position: relative;
-}
-
-.navbar-links a::before {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #b2f5ea;
-    transition: width 0.3s ease;
-}
-
-.navbar-links a:hover::before {
     width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%; /* Asegura que cada slide ocupe el 100% del ancho */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.carousel-nav .carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav .carousel-indicator.active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#mision-vision-enfoque {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#mision-vision-enfoque h2.section-title {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+#mision-vision-enfoque p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1rem;
+    color: #555;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #333;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Para pantallas de celular (menos de 768px) */
+@media (max-width: 768px) {
+    header.navbar {
+        flex-direction: column; /* Apila los elementos del header */
+        text-align: center;
+    }
+    header.navbar .navbar-logo {
+        margin-bottom: 1rem;
+        justify-content: center; /* Centra el logo en pantallas pequeñas*/
+    }
+    nav ul.navbar-links {
+        flex-direction: column; /* Apila los links de navegación */
+    }
+    nav ul.navbar-links li {
+        margin: 0.5rem 0;
+    }
+    .bloquePrincipal h2.titulo-principal {
+        font-size: 2rem;
+    }
+    .bloquePrincipal p {
+        font-size: 1rem;
+    }
+    #mision-vision-enfoque h2.section-title {
+        font-size: 1.6rem;
+    }
+    #mision-vision-enfoque p {
+        font-size: 1rem;
+    }
+    .testimonial-card p{
+        font-size: 0.9rem;
+    }
+}
+
+/* Para pantallas de tablet (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav ul.navbar-links {
+        justify-content: center; /* Centra los links en tabletas */
+    }
+    .bloquePrincipal h2.titulo-principal {
+        font-size: 2.5rem;
+    }
+    .bloquePrincipal p {
+        font-size: 1.1rem;
+    }
+    #mision-vision-enfoque h2.section-title {
+        font-size: 1.8rem;
+    }
+    #mision-vision-enfoque p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para escritorios (más de 1024px) */
+@media (min-width: 1025px) {
+    header.navbar {
+        flex-direction: row; /* Vuelve al diseño horizontal en escritorios */
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav ul.navbar-links {
+        flex-direction: row; /* Mantiene los links horizontales en escritorio */
+    }
+    nav ul.navbar-links li {
+        margin: 0 1rem;
+    }
+    .bloquePrincipal h2.titulo-principal {
+        font-size: 3rem;
+    }
+    .bloquePrincipal p {
+        font-size: 1.2rem;
+    }
+    #mision-vision-enfoque h2.section-title {
+        font-size: 2rem;
+    }
+    #mision-vision-enfoque p {
+        font-size: 1.1rem;
+    }
 }
