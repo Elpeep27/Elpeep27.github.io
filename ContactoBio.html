@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Datos de Salud - Biokinessis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecontacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+   
+        </head>
+        <body class="p-4 md:p-8">
+            <header class="navbar">
+                <div class="navbar-logo">
+                    <img src="imagenes/imagenes/Logo principal.png" alt="Logo de Biokinessis"> <span class="text-xl font-semibold text-white">Biokinessis</span>
+                </div>
+                <nav>
+                    <ul class="navbar-links">
+                        <li><a href="Principal BioKinessis.html">Inicio</a></li>
+                        <li><a href="ServiciosBio.html">Servicios</a></li>
+                        <li><a href="ContactoBio.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
+            <div id="inicio" class="container max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 md:p-10 mt-8">
+                <h1 class="text-2xl md:text-3xl font-semibold text-teal-600 text-center mb-6">Registro de Datos de Salud</h1>
+                <form class="space-y-4 md:space-y-6" action="https://formsubmit.co/biokinessisfisio@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo Registro de Datos de Salud">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div>
+                        <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingrese su nombre">
+                    </div>
+                    <div>
+                        <label for="fecha_nacimiento" class="block text-gray-700 text-sm font-bold mb-2">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingrese su email">
+                    </div>
+                    <div>
+                        <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingrese su teléfono">
+                    </div>
+                    <div>
+                        <label for="motivo_consulta" class="block text-gray-700 text-sm font-bold mb-2">Motivo de Consulta:</label>
+                        <textarea id="motivo_consulta" name="motivo_consulta" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Describa el motivo de su consulta"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Registro</button>
+                    </div>
+                </form>
+            </div>
+        
+        
+        
+            <section id="contacto" class="container max-w-2xl mx-auto py-12">
+                <h2 class="text-2xl font-semibold text-teal-600 text-center mb-8">Contáctanos</h2>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-gray-700 text-center mb-4">¡Estamos listos para atenderte! Contáctanos para agendar tu cita o resolver tus dudas.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://wa.me/5535042910?text=Hola,%20quiero%20agendar%20una%20cita" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar WhatsApp</a>
+                        <a href="mailto:biokinessisfisio@gmail.com" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Email</a>
+                    </div>
+                </div>
+            </section>
+        
+            <footer class="bg-gray-100 mt-8 py-4 text-center text-gray-600 text-sm">
+                © 2025 Biokinessis. Todos los derechos reservados.
+            </footer>
+    <script src="Logcacontacto.js"></script>
+</body>
+</html>

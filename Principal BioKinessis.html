@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BioKinessis</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styleinicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+
+<body class="p-4 md:p-8">
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="imagenes/imagenes/Logo principal.png" alt="Logo de Biokinessis">
+            <span class="text-xl font-semibold text-white">Biokinessis</span>
+        </div>
+        <nav>
+            <ul class="navbar-links">
+                <li><a href="Principal BioKinessis.html">Inicio</a></li>
+                <li><a href="ServiciosBio.html">Servicios</a></li>
+                <li><a href="ContactoBio.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bloquePrincipal">
+            <h2 class="titulo-principal">BioKinessis</h2>
+            <p>En <strong>BioKinessis</strong>, entendemos que la verdadera salud comienza en tu interior. Nuestro enfoque de
+                fisioterapia se basa en la idea de <strong class="lema-destacado">"SANANDO DESDE DENTRO, FLORECIENDO POR FUERA"</strong>
+                A través de la conexión mente-cuerpo y reconociendo la importancia de tu mentalidad, te acompañamos con
+                transparencia y consideración. Nuestro objetivo es que comprendas el valor de cuidar tu salud física a lo largo
+                del tiempo, para una vida plena y vibrante.</p>
+        </section>
+
+        <section class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_0048.jpg" alt="Imagen 1 de 6 carrusel">
+                </div>
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_0146.jpg" alt="Imagen 2 de 6 carrusel">
+                </div>
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_0181.JPG" alt="Imagen 3 de 6 carrusel">
+                </div>
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_0290.jpg" alt="Imagen 4 de 6 carrusel">
+                </div>
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_9805.jpg" alt="Imagen 5 de 6 carrusel">
+                </div>
+                <div class="carousel-slide"><img src="imagenes/imagenes/IMG_9990.jpg" alt="Imagen 6 de 6 carrusel">
+                </div>
+            </div>
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+            <div class="carousel-nav">
+                <span class="carousel-indicator active"></span>
+                <span class="carousel-indicator"></span>
+                <span class="carousel-indicator"></span>
+            </div>
+        </section>
+
+        <section id="mision-vision-enfoque">
+            <h2 class="section-title">Nuestra Misión</h2>
+            <p>Inspirar y empoderar a las personas para que exploren y desarrollen su potencial de transformación personal, a
+                través de la conexión entre la mente y el cuerpo.</p>
+            <h2 class="section-title">Nuestra Visión</h2>
+            <p>Crear un mundo donde cada persona pueda alcanzar su máximo potencial, expandiendo los límites de lo posible a
+                través del autodescubrimiento y la transformación interior.</p>
+            <h2 class="section-title">Nuestro Enfoque</h2>
+            <p>
+                Biokinesis se dedica a la exploración del potencial humano a través de enfoques innovadores, centrándose en la
+                conexión mente-cuerpo. Buscamos guiar a las personas en un viaje de autoconocimiento, proporcionando
+                herramientas y técnicas para potenciar la concentración, manejar la energía y lograr un mayor bienestar y
+                crecimiento personal.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Testimonios</h2>
+            <div class="testimonial-card">
+                <p>"Después de meses de dolor de espalda, finalmente encontré alivio en BioKinessis. El enfoque holístico realmente
+                    marcó la diferencia."</p>
+                <h4>- Juan P.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"La atención personalizada y el apoyo que recibí durante mi rehabilitación post-quirúrgica fueron
+                    excepcionales. ¡Gracias, BioKinessis!"</p>
+                <h4>- María G.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"BioKinessis me ayudó a comprender mejor mi cuerpo y a tomar el control de mi salud. ¡Recomiendo sus servicios
+                    a todos!"</p>
+                <h4>- Carlos R.</h4>
+            </div>
+        </section>
+    </main>
+
+    <script src="logicaCarrusel.js"></script>
+    <script src="logicaprincipal.js"></script>
+</body>
+
+</html>
