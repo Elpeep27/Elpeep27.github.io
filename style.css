@@ -359,9 +359,9 @@
 
   @media (max-width: 768px) {
     header.navbar {
-      flex-direction: column;
-      text-align: center;
-      padding: 0.5rem; /* Más pequeño en móvil */
+      flex-direction: unset;
+      text-align: right;
+      padding: 0.2rem; /* Más pequeño en móvil */
     }
 
     .navbar-logo {
@@ -370,36 +370,36 @@
     }
 
     nav ul {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
     }
 
     nav ul li {
       margin-left: 0;
-      margin-top: 0.5rem; /* Más pequeño en móvil */
+      margin-top: 0.1rem; /* Más pequeño en móvil */
     }
 
     main {
-      margin-top: 7rem; /* Ajustado para el nuevo header */
+      margin-top: 5rem; /* Ajustado para el nuevo header */
     }
   }
 
   @media (max-width: 480px) {
     header.navbar {
-      padding: 0.25rem; /* Aún más pequeño en móvil */
-      flex-direction: column; /* Asegura la dirección de columna en pantallas muy pequeñas */
+      padding: 0.10rem; /* Aún más pequeño en móvil */
+      flex-direction:  row; /* Asegura la dirección de columna en pantallas muy pequeñas */
     }
 
     .navbar-logo {
-      margin-bottom: 0.25rem; /* Espacio reducido para el logo en móvil */
+      margin-bottom: 0.10rem; /* Espacio reducido para el logo en móvil */
     }
 
     .navbar-logo img {
-      height: 2rem; /* Más pequeño en móvil */
+      height: 1rem; /* Más pequeño en móvil */
     }
 
     .navbar-logo span {
-      font-size: 1rem; /* Aún más pequeño en móvil */
+      font-size: .5rem; /* Aún más pequeño en móvil */
     }
 
     nav ul {
@@ -415,17 +415,17 @@
     }
 
     main {
-      margin-top: 6rem; /* Ajustado para el header */
-      padding: 0.75rem; /* Menos padding en móvil */
+      margin-top: 3rem; /* Ajustado para el header */
+      padding: 0.35rem; /* Menos padding en móvil */
     }
 
     main section.bloquePrincipal h2.titulo-principal {
-      font-size: 1.4rem; /* Aún más pequeño en móvil */
+      font-size: 0.5rem; /* Aún más pequeño en móvil */
     }
 
     main section.bloquePrincipal p {
       font-size: 0.85rem; /* Aún más pequeño en móvil */
-      line-height: 1.4; /* Aún más pequeño en móvil */
+      line-height: 1.1; /* Aún más pequeño en móvil */
     }
   }
 
