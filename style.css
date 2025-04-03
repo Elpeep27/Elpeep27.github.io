@@ -386,24 +386,24 @@
 
   @media (max-width: 480px) {
     header.navbar {
-      padding: 0.10rem; /* Aún más pequeño en móvil */
+      padding: 1.10rem; /* Aún más pequeño en móvil */
       flex-direction:  row; /* Asegura la dirección de columna en pantallas muy pequeñas */
     }
 
     .navbar-logo {
-      margin-bottom: 0.10rem; /* Espacio reducido para el logo en móvil */
+      margin-bottom: .60rem; /* Espacio reducido para el logo en móvil */
     }
 
     .navbar-logo img {
-      height: 1rem; /* Más pequeño en móvil */
+      height: 1.5rem; /* Más pequeño en móvil */
     }
 
     .navbar-logo span {
-      font-size: .5rem; /* Aún más pequeño en móvil */
+      font-size: 0.8rem; /* Aún más pequeño en móvil */
     }
 
     nav ul {
-      flex-direction: column; /* Asegura la dirección de columna en pantallas muy pequeñas */
+      flex-direction: unset; /* Asegura la dirección de columna en pantallas muy pequeñas */
     }
     nav ul li {
       margin-top: 0.5rem; /* Reduce el margen entre elementos de navegación en móvil */
@@ -420,7 +420,7 @@
     }
 
     main section.bloquePrincipal h2.titulo-principal {
-      font-size: 0.5rem; /* Aún más pequeño en móvil */
+      font-size: 1.5rem; /* Aún más pequeño en móvil */
     }
 
     main section.bloquePrincipal p {
