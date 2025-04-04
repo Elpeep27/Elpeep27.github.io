@@ -126,7 +126,7 @@
 
   main section.bloquePrincipal p {
     color: var(--color-texto-claro);
-    font-size: 0.9rem; /* Más pequeño en móvil */
+    font-size: 1.1rem; /* Más pequeño en móvil */
     line-height: 1.5; /* Más pequeño en móvil */
     margin-bottom: 0.75rem; /* Más pequeño en móvil */
   }
@@ -135,79 +135,7 @@
     color: var(--color-texto-claro);
   }
 
-  .carousel-container {
-    position: relative;
-    width: 95%; /* Más ancho en móvil */
-    max-width: 800px;
-    margin: 2rem auto;
-    overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-
-  .carousel-slide {
-    flex: 0 0 100%;
-    height: auto;
-  }
-
-  .carousel-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 1rem;
-  }
-
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem; /* Más pequeño en móvil */
-    font-size: 1.2rem; /* Más pequeño en móvil */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 0.5rem;
-    outline: none;
-  }
-
-  .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .carousel-button.prev {
-    left: 0.5rem; /* Más pequeño en móvil */
-  }
-
-  .carousel-button.next {
-    right: 0.5rem; /* Más pequeño en móvil */
-  }
-
-  .carousel-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .carousel-nav .carousel-indicator {
-    width: 0.75rem; /* Más pequeño en móvil */
-    height: 0.75rem; /* Más pequeño en móvil */
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 0.25rem; /* Más pequeño en móvil */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .carousel-nav .carousel-indicator.active {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+  
 
   main section.bloquePrincipal p#mision {
     color: var(--color-primario);
