@@ -1,359 +1,130 @@
+:root {
+  /* Green Monochromatic Palette from Flyers */
+  --bg-sage-light: #e6edeb; /* Light grayish green background */
+  --color-dark-green: #37463d; /* Dark forest green for text/logos */
+  --color-accent: #6f8072; /* Mid sage green for hovers */
+  --header-bg: #8ba394; /* Header background (translucent effect later maybe) */
+  --white: #ffffff;
+}
 
-  :root {
-    --color-primario: #34e0d6;
-    --color-secundario: #21b1a6;
-    --color-terciario: #0c7169;
-    --color-cuaternario: #043434;
-    --color-texto-claro: #ffffff;
-    --color-fondo-claro: #f0fdf4;
-    --color-fondo-oscuro: #041e1e;
+body {
+  font-family: "Crete Round", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg-sage-light);
+  color: var(--color-dark-green);
+  margin: 0;
+  padding: 0;
+  /* Smooth scroll behavior */
+  scroll-behavior: smooth;
+}
+
+/* --- HEADER & NAVIGATION (FLEXBOX) --- */
+header {
+  background-color: var(--header-bg);
+  width: 100%;
+  position: sticky; /* Better than fixed, handles spacing automatically below it */
+  top: 0;
+  z-index: 1000; /* Ensure it stays above content */
+  box-shadow: 0 4px 12px rgba(55, 70, 61, 0.15); /* Soft shadow */
+}
+
+.caja {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 90px;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+h1 img {
+  width: 70px;
+  border-radius: 50%; /* Perfect circle */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+h1 img:hover {
+  transform: scale(1.05); /* Slight pop on hover */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Space between links */
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover Underline Animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  left: 50%;
+  background-color: var(--color-dark-green);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: var(--color-dark-green);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* --- HERO BANNER --- */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Optional: max-height if you want it less tall on huge screens max-height: 500px;*/
+}
+
+/* --- GLOBAL ANIMATIONS --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-  body {
-    background-color: var(--color-fondo-claro);
-    color: var(--color-cuaternario);
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-  }
-
-  header.navbar {
-    backdrop-filter: blur(12px);
-    background-color: var(--color-fondo-oscuro);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.25rem 0.5rem; /* Más pequeño en móvil */
-    box-sizing: border-box;
-  }
-
-  header.navbar.scrolled {
-    background-color: var(--color-fondo-oscuro);
-  }
-
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-    margin-left: 0.5rem; /* Más pequeño en móvil */
-  }
-
-  .navbar-logo img {
-    height: 2.5rem; /* Más pequeño en móvil */
-  }
-
-  .navbar-logo span {
-    color: var(--color-texto-claro);
-    font-size: 1.2rem; /* Más pequeño en móvil */
-    font-weight: 700;
-    margin-left: 0.5rem; /* Más pequeño en móvil */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin-left: 0.5rem; /* Más pequeño en móvil */
-  }
-
-  nav ul li a {
-    color: var(--color-texto-claro);
-    font-weight: 600;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    font-size: 1rem; /* Más pequeño en móvil */
-    padding: 0.25rem 0.5rem; /* Más pequeño en móvil */
-    border-radius: 0.5rem;
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-
-  nav ul li a:hover {
-    color: var(--color-primario);
-    text-shadow: 0 0 8px rgba(52, 224, 214, 0.8);
-    background-color: rgba(52, 224, 214, 0.1);
-  }
-
-  nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primario);
-    transition: width 0.3s ease;
-  }
-
-  nav ul li a:hover::after {
-    width: 100%;
-  }
-
-  main {
-    margin-top: 6rem; /* Ajustado para el nuevo header */
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: rgba(4, 36, 37, 0.7);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 95%; /* Más ancho en móvil */
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-  }
-
-  main section.bloquePrincipal {
-    margin-bottom: 2rem;
-  }
-
-  main section.bloquePrincipal h2.titulo-principal {
-    color: var(--color-primario);
-    font-size: 1.6rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  main section.bloquePrincipal p {
-    color: var(--color-texto-claro);
-    font-size: 1.1rem; /* Más pequeño en móvil */
-    line-height: 1.5; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-  }
-
-  main section.bloquePrincipal p strong {
-    color: var(--color-texto-claro);
-  }
-
-  
-
-  main section.bloquePrincipal p#mision {
-    color: var(--color-primario);
-    font-size: 1rem; /* Más pequeño en móvil */
-    font-style: italic;
-    text-align: center;
-    margin-top: 1.5rem; /* Más pequeño en móvil */
-    padding: 0.5rem; /* Más pequeño en móvil */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  .section-title {
-    color: var(--color-primario);
-    font-size: 1.4rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-radius: 1rem;
-    padding: 1rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .testimonial-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .testimonial-card p {
-    color: var(--color-texto-claro);
-    font-size: 0.9rem; /* Más pequeño en móvil */
-    line-height: 1.5; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-    font-style: italic;
-  }
-
-  .testimonial-card h4 {
-    color: var(--color-primario);
-    font-size: 1rem; /* Más pequeño en móvil */
-    font-weight: 600;
-    text-align: right;
-    margin-bottom: 0.25rem; /* Más pequeño en móvil */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  .approach-section {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-radius: 1rem;
-    padding: 1rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .approach-section h2 {
-    color: var(--color-primario);
-    font-size: 1.4rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .approach-section p {
-    color: var(--color-texto-claro);
-    font-size: 0.9rem; /* Más pequeño en móvil */
-    line-height: 1.5; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-  }
-
-  .approach-section ul {
-    list-style: disc;
-    padding-left: 1.5rem; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-  }
-
-  .approach-section ul li {
-    color: var(--color-texto-claro);
-    font-size: 0.9rem; /* Más pequeño en móvil */
-    line-height: 1.5; /* Más pequeño en móvil */
-  }
-
-  #mision-vision-enfoque {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-radius: 1rem;
-    padding: 1rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #mision-vision-enfoque h2 {
-    color: var(--color-primario);
-    font-size: 1.4rem; /* Más pequeño en móvil */
-    margin-bottom: 1rem; /* Más pequeño en móvil */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  #mision-vision-enfoque p {
-    color: var(--color-texto-claro);
-    font-size: 0.9rem; /* Más pequeño en móvil */
-    line-height: 1.5; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-    text-align: center;
-    transition: background-image 0.5s ease, transform 0.3s ease;
-    padding: 0.5rem; /* Más pequeño en móvil */
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  #mision-vision-enfoque p:hover {
-    background-image: linear-gradient(to top, rgba(255, 223, 0, 0.2), rgba(255, 248, 220, 0.2));
-    color: var(--color-texto-claro);
-    text-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
-    transform: scale(1.05);
-  }
-
-  #mision-vision-enfoque h3 {
-    color: var(--color-primario);
-    font-size: 1.2rem; /* Más pequeño en móvil */
-    margin-bottom: 0.75rem; /* Más pequeño en móvil */
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  .lema-destacado {
-    color: var(--color-primario);
-    font-size: 1rem; /* Más pequeño en móvil */
-    font-style: italic;
-    text-align: center;
-    margin-top: 1.5rem; /* Más pequeño en móvil */
-    padding: 0.5rem; /* Más pequeño en móvil */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    header.navbar {
-      flex-direction: unset;
-      text-align: right;
-      padding: 0.2rem; /* Más pequeño en móvil */
-    }
-
-    .navbar-logo {
-      margin-bottom: 0.5rem; /* Más pequeño en móvil */
-      margin-left: 0;
-    }
-
-    nav ul {
-      flex-direction: row;
-      align-items: center;
-    }
-
-    nav ul li {
-      margin-left: 0;
-      margin-top: 0.1rem; /* Más pequeño en móvil */
-    }
-
-    main {
-      margin-top: 5rem; /* Ajustado para el nuevo header */
-    }
-  }
-
-  @media (max-width: 480px) {
-    header.navbar {
-      padding: 1.10rem; /* Aún más pequeño en móvil */
-      flex-direction:  row; /* Asegura la dirección de columna en pantallas muy pequeñas */
-    }
-
-    .navbar-logo {
-      margin-bottom: .60rem; /* Espacio reducido para el logo en móvil */
-    }
-
-    .navbar-logo img {
-      height: 1.5rem; /* Más pequeño en móvil */
-    }
-
-    .navbar-logo span {
-      font-size: 0.8rem; /* Aún más pequeño en móvil */
-    }
-
-    nav ul {
-      flex-direction: unset; /* Asegura la dirección de columna en pantallas muy pequeñas */
-    }
-    nav ul li {
-      margin-top: 0.5rem; /* Reduce el margen entre elementos de navegación en móvil */
-    }
-
-    nav ul li a {
-      font-size: 0.9rem; /* Aún más pequeño en móvil */
-      padding: 0.25rem 0.5rem; /* Aún más pequeño en móvil */
-    }
-
-    main {
-      margin-top: 3rem; /* Ajustado para el header */
-      padding: 0.35rem; /* Menos padding en móvil */
-    }
-
-    main section.bloquePrincipal h2.titulo-principal {
-      font-size: 1.5rem; /* Aún más pequeño en móvil */
-    }
-
-    main section.bloquePrincipal p {
-      font-size: 0.85rem; /* Aún más pequeño en móvil */
-      line-height: 1.1; /* Aún más pequeño en móvil */
-    }
-  }
-
+}
