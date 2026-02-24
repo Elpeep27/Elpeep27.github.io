@@ -1,9 +1,13 @@
 :root {
   /* Green Monochromatic Palette from Flyers */
-  --bg-sage-light: #e6edeb; /* Light grayish green background */
-  --color-dark-green: #37463d; /* Dark forest green for text/logos */
-  --color-accent: #6f8072; /* Mid sage green for hovers */
-  --header-bg: #8ba394; /* Header background (translucent effect later maybe) */
+  --bg-sage-light: #e6edeb;
+  /* Light grayish green background */
+  --color-dark-green: #37463d;
+  /* Dark forest green for text/logos */
+  --color-accent: #6f8072;
+  /* Mid sage green for hovers */
+  --header-bg: #8ba394;
+  /* Header background (translucent effect later maybe) */
   --white: #ffffff;
 }
 
@@ -23,10 +27,13 @@ body {
 header {
   background-color: var(--header-bg);
   width: 100%;
-  position: sticky; /* Better than fixed, handles spacing automatically below it */
+  position: sticky;
+  /* Better than fixed, handles spacing automatically below it */
   top: 0;
-  z-index: 1000; /* Ensure it stays above content */
-  box-shadow: 0 4px 12px rgba(55, 70, 61, 0.15); /* Soft shadow */
+  z-index: 1000;
+  /* Ensure it stays above content */
+  box-shadow: 0 4px 12px rgba(55, 70, 61, 0.15);
+  /* Soft shadow */
 }
 
 .caja {
@@ -47,13 +54,15 @@ h1 {
 
 h1 img {
   width: 70px;
-  border-radius: 50%; /* Perfect circle */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  /* Perfect circle */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 h1 img:hover {
-  transform: scale(1.05); /* Slight pop on hover */
+  transform: scale(1.05);
+  /* Slight pop on hover */
 }
 
 nav ul {
@@ -61,7 +70,8 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px; /* Space between links */
+  gap: 30px;
+  /* Space between links */
 }
 
 nav li {
@@ -118,13 +128,47 @@ nav a:hover::after {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE HEADER OVERRIDES */
+@media (max-width: 768px) {
+  header .caja {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    /* Permite que los links pasen a otra línea si no caben */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header nav ul li a {
+    font-size: 0.95rem;
+    /* Letra un poco más chica */
+    padding: 6px;
+  }
+
+  header h1 img {
+    max-width: 150px;
   }
 }
