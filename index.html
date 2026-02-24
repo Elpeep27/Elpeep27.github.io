@@ -35,12 +35,20 @@
     <header class="fade-in-up">
         <div class="caja">
             <h1><img src="imagenes/Logo.png" alt="Logo BioKinessis"></h1>
-            <nav>
+
+            <!-- Boton de menu hamburguesa (solo visible en movil via CSS) -->
+            <button id="menu-toggle" class="hamburger-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#quienes-somos">Quienes somos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contactanos</a></li>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#quienes-somos" class="nav-link">Quienes somos</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contactanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -186,8 +194,32 @@
     </main>
 
     <script>
-        // Auto-scroll simple para el carrusel
         document.addEventListener('DOMContentLoaded', () => {
+            // Lógica Menú Hamburguesa
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (menuToggle && navMenu) {
+                // Abrir/Cerrar menú
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('open');
+                    navMenu.classList.toggle('mobile-active');
+                    // Prevenir scroll en body cuando está abierto
+                    document.body.style.overflow = navMenu.classList.contains('mobile-active') ? 'hidden' : 'auto';
+                });
+
+                // Cerrar menú al hacer clic en un enlace interno
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('open');
+                        navMenu.classList.remove('mobile-active');
+                        document.body.style.overflow = 'auto'; // Restaurar scroll
+                    });
+                });
+            }
+
+            // Auto-scroll simple para el carrusel
             const carrusel = document.getElementById('carruselCasos');
             let isDown = false;
             let startX;
